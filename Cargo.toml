@@ -58,6 +58,9 @@ creation-flags = ["dep:windows", "windows/Win32_System_Threading"]
 ## Wrapper: Job Object
 job-object = ["dep:windows", "windows/Win32_Security", "windows/Win32_System_Diagnostics_ToolHelp", "windows/Win32_System_IO", "windows/Win32_System_JobObjects", "windows/Win32_System_Threading"]
 
+## Owned Windows Job with nonblocking completion and pipe polling.
+owned-job = ["std", "job-object", "windows/Win32_System_Pipes"]
+
 ## Wrapper: Kill on Drop
 kill-on-drop = []
 

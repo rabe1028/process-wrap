@@ -16,6 +16,9 @@ pub use creation_flags::CreationFlags;
 #[cfg(all(windows, feature = "job-object"))]
 #[doc(inline)]
 pub use job_object::{JobObject, JobObjectChild};
+#[cfg(all(windows, feature = "owned-job"))]
+#[doc(inline)]
+pub use owned_job::{NonblockingPipe, OwnedJobChild};
 #[cfg(all(unix, feature = "process-group"))]
 #[doc(inline)]
 pub use process_group::{ProcessGroup, ProcessGroupChild};
@@ -31,6 +34,8 @@ mod core;
 mod creation_flags;
 #[cfg(all(windows, feature = "job-object"))]
 mod job_object;
+#[cfg(all(windows, feature = "owned-job"))]
+mod owned_job;
 #[cfg(all(unix, feature = "process-group"))]
 mod process_group;
 #[cfg(all(unix, feature = "process-session"))]
